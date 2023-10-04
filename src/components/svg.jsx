@@ -6,7 +6,7 @@ export const sideBarIcon = <svg width="16" height="16" viewBox="0 0 16 16" fill=
 </svg>
 
 export const addNew = <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-<path d="M16.9705 24.3951V9.5459" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M24.3951 16.9705H9.54584" stroke="#1E293B" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.9705 24.3951V9.5459" stroke="#1E293B" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M24.3951 16.9705H9.54584" stroke="#1E293B" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 
