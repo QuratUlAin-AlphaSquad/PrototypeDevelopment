@@ -21,7 +21,7 @@ const Sidebar = () => {
            
 <FormControl fullWidth>
     
-<InputLabel className="!flex !items-center !gap-5 !px-6"> {sideBarIcon}Settings</InputLabel>
+<InputLabel className="!flex !items-center !gap-5 !px-6 !normal-case !text-sm !leading-6 !tracking-[-0.14px] hover:!text-black !font-medium"> {sideBarIcon}Settings</InputLabel>
 
 <Select
           labelId="demo-simple-select-label"
