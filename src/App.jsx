@@ -10,44 +10,36 @@ import Heading from "./components/reuseable/Heading";
 // import ProductSize from "./components/ProductSize";
 // import SizeName from "./components/SizeName";
 
-
 function App() {
   const theme = createTheme({
     typography: {
       fontFamily: ["Inter", "sans-serif"].join(","),
     },
-  }); 
+  });
   // const [count, setCount] = useState(0)
 
   return (
     <>
-
-<div className="container mx-auto">
-
-    <ThemeProvider theme={theme}>
-      <Typography>
-
-      <div className="">
-        <Header />
-        <div className="flex">
-          <Sidebar />
-          <div className="w-full">
-            <Heading />
-            <Content />
-            {/* <ProductType /> */}
-            {/* <ProductSize /> */}
-           {/* <SizeName /> */}
-          </div>
-        </div>
-        {/* Prototype Dev */}
+      <div className="container mx-auto">
+        <ThemeProvider theme={theme}>
+          <Typography>
+            <div className="">
+              <Header />
+              <div className="flex">
+                <Sidebar />
+                <div className="w-full">
+                  <Heading />
+                  <Content />
+                  {/* <ProductType /> */}
+                  {/* <ProductSize /> */}
+                  {/* <SizeName /> */}
+                </div>
+              </div>
+              {/* Prototype Dev */}
+            </div>
+          </Typography>
+        </ThemeProvider>
       </div>
-
-      </Typography>
-      
-    </ThemeProvider>
-    </div>
-    
-
     </>
   );
 }
