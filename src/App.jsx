@@ -1,48 +1,53 @@
 // import { useState } from 'react'
 
+import { ThemeProvider, Typography, createTheme } from "@mui/material";
 import "./App.css";
 import Content from "./components/Content";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/reuseable/Header";
 import Heading from "./components/reuseable/Heading";
+// import ProductType from "./components/ProductType";
+// import ProductSize from "./components/ProductSize";
+// import SizeName from "./components/SizeName";
+
 
 function App() {
+  const theme = createTheme({
+    typography: {
+      fontFamily: ["Inter", "sans-serif"].join(","),
+    },
+  }); 
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className="container mx-auto">
+
+<div className="container mx-auto">
+
+    <ThemeProvider theme={theme}>
+      <Typography>
+
+      <div className="">
         <Header />
         <div className="flex">
           <Sidebar />
-          <div>
+          <div className="w-full">
             <Heading />
             <Content />
+            {/* <ProductType /> */}
+            {/* <ProductSize /> */}
+           {/* <SizeName /> */}
           </div>
         </div>
-        Prototype Dev
+        {/* Prototype Dev */}
       </div>
 
-      {/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
+      </Typography>
+      
+    </ThemeProvider>
+    </div>
+    
+
     </>
   );
 }
