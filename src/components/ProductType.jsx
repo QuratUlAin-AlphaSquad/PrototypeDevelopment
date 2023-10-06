@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Button, TextField } from "@mui/material";
 import { addNew, deleteSvg } from "./svg";
+import Layout from "./Layout";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -48,7 +49,7 @@ export default function VerticalTabs() {
   };
 
   return (
-    <>
+    <Layout>
       <div className="pt-9 pl-20 ">
         <div className="pt-9 pl-20">
           <p className="text-base leading-4 font-medium ">
@@ -168,6 +169,6 @@ export default function VerticalTabs() {
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 }

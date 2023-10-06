@@ -8,6 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Button, MenuItem, Select } from "@mui/material";
+import Layout from "./Layout";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -42,6 +43,7 @@ const rows = [
 export default function CustomizedTables() {
   return (
     <>
+    <Layout>
       <div className="flex flex-col">
         <div className="px-16 pt-4">
           <div className=" flex justify-end pt-7">
@@ -101,6 +103,7 @@ export default function CustomizedTables() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 }

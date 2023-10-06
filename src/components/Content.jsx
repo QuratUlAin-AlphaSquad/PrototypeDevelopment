@@ -3,6 +3,7 @@
 import { Button, TextField } from "@mui/material";
 import { addNew, deleteSvg } from "./svg";
 import { useState } from "react";
+import Layout from "./Layout";
 
 const Content = () => {
 const [data, setData] = useState([{fname:"", lname:""}])
@@ -23,7 +24,7 @@ const handleDelete=(i)=>{
   setData(deleteVal)
 }
   return (
-    <>
+    <Layout>
       <div className=" pt-[37px] pl-20 flex flex-col gap-8 max-w-[600px] w-full">
       <p className="text-base leading-4 font-medium">Categories</p>
 
@@ -52,7 +53,7 @@ const handleDelete=(i)=>{
           </div>
 
       </div>
-    </>
+    </Layout>
   );
 };
 
