@@ -24,32 +24,25 @@ const handleDelete=(i)=>{
 }
   return (
     <>
-      <div className="pt-[37px] pl-20 flex flex-col gap-8 max-w-[600px] w-full">
-        <p className="text-base leading-4 font-medium">Categories</p>
-        
-        <div className="flex items-center gap-3">
-          {/* Map Input & del btn */}
-          
-          <TextField
-            required
+      <div className=" pt-[37px] pl-20 flex flex-col gap-8 max-w-[600px] w-full">
+      <p className="text-base leading-4 font-medium">Categories</p>
+
+          {
+          data.map((val, i) =>
+          <div key={data.i} className="flex gap-3 ">
+            <TextField className="border-2 max-w-[452px] w-full" required
             id="outlined-basic"
-            label="Print Only"
-            className="max-w-[452px] w-full"
-          />
-          <div className=" w-9 h-9 hover:bg-[#F0F0F0] flex items-center justify-center rounded-full">
-            {" "}
-            {deleteSvg}
+            label="Print Only" name="fname" value={val.fname} onChange={(e)=>handleChange(e,i)} />
+            {/* <input name="lname"  className="border-2" value={val.fname} onChange={(e)=>handleChange(e,i)} /> */}
+            <div className="w-9 h-9 hover:bg-[#F0F0F0] flex items-center justify-center rounded-full">
+<Button  onClick={()=>handleDelete(i)}> {" "}
+            {deleteSvg}</Button></div>
           </div>
-        </div>
-        <div className="flex flex-col gap-7">
-          <Button
-            variant="contained"
-            className="!bg-[#F0F0F0] max-w-[452px] w-full"
-            // onClick={}
-          >
-            {addNew}
-          </Button>
-          <div className="flex justify-end max-w-[452px]">
+          )
+        }
+                  <Button onClick={handleClick}     variant="contained"
+            className="!bg-[#F0F0F0] max-w-[452px] w-full">  {addNew}</Button>
+                  <div className="flex justify-end max-w-[452px]">
             <Button
               variant="outlined"
               className="!text-black hover:!border-gray-500 !border-black  max-w-[38px] !flex !content-end !normal-case !text-base !font-bold !tracking-[0.16px]"
@@ -57,22 +50,6 @@ const handleDelete=(i)=>{
               Save
             </Button>
           </div>
-        </div>
-      </div>
-
-
-      <div>
-        
-          {
-          data.map((val, i) =>
-          <div key={data.i}>
-            <input className="border-2" name="fname" value={val.fname} onChange={(e)=>handleChange(e,i)} />
-            {/* <input name="lname" value={val.fname} onChange={(e)=>handleChange(e,i)} /> */}
-<button onClick={()=>handleDelete(i)}>Delete</button>
-          </div>
-          )
-        }
-                  <button onClick={handleClick}> Add</button>
 
       </div>
     </>

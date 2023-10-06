@@ -6,9 +6,9 @@ import Content from "./components/Content";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/reuseable/Header";
 import Heading from "./components/reuseable/Heading";
-// import ProductType from "./components/ProductType";
-// import ProductSize from "./components/ProductSize";
-// import SizeName from "./components/SizeName";
+import ProductType from "./components/ProductType";
+import ProductSize from "./components/ProductSize";
+import SizeName from "./components/SizeName";
 
 function App() {
   const theme = createTheme({
